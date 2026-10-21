@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZOUMBOUZOU AI</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b1020;
+      color: white;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #121a30;
+      border-bottom: 1px solid #293653;
+    }
+    header h1 { margin: 0; color: #70e1ff; }
+    header p { color: #b9c5df; }
+    main {
+      width: min(900px, 92%);
+      margin: 35px auto;
+    }
+    .hero { text-align: center; margin-bottom: 30px; }
+    .hero h2 { font-size: 32px; }
+    .hero span { color: #70e1ff; }
+    .card {
+      background: #151f36;
+      padding: 22px;
+      border-radius: 16px;
+      border: 1px solid #30415f;
+    }
+    textarea {
+      width: 100%;
+      min-height: 140px;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #526482;
+      background: #0b1020;
+      color: white;
+      font-size: 16px;
+      resize: vertical;
+    }
+    button {
+      margin-top: 12px;
+      padding: 13px 20px;
+      border: 0;
+      border-radius: 10px;
+      background: #70e1ff;
+      color: #071322;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    #result {
+      margin-top: 18px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #aebbd3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZOUMBOUZOU AI</h1>
+    <p>Your creative AI workspace</p>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Welcome to <span>ZOUMBOUZOU AI</span></h2>
+      <p>A simple space for your ideas and creativity.</p>
+    </section>
+
+    <section class="card">
+      <h2>AI Text Assistant</h2>
+      <p>Write an idea or question to get started.</p>
+      <textarea id="prompt" placeholder="Write your idea here..."></textarea>
+      <br>
+      <button onclick="showMessage()">Get Started</button>
+      <div id="result"></div>
+    </section>
+  </main>
+
+  <footer>ZOUMBOUZOU AI © 2026</footer>
+
+  <script>
+    function showMessage() {
+      const prompt = document.getElementById('prompt').value.trim();
+      const result = document.getElementById('result');
+      if (!prompt) {
+        result.textContent = 'Please write an idea first.';
+        return;
+      }
+      result.textContent =
+        'Your idea: ' + prompt +
+        '\n\nThis is the first version of ZOUMBOUZOU AI. An AI service connection will be added in a later step.';
+    }
+  </script>
+</body>
+</html>
